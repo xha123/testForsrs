@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <EditText
+        android:id="@+id/sheng_ed"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/touming"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="20sp"
+        android:gravity="center"
+        />
+    <Button
+        android:id="@+id/sheng_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="生成二维码"
+        />
+    <RelativeLayout
+        android:layout_marginLeft="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <CheckBox
+            android:id="@+id/sheng_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_centerVertical="true"
+            android:text="添加logo"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/sheng_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
