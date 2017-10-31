@@ -131,6 +131,14 @@
             android:textAllCaps="false"
             />
 
+        <Button
+            android:id="@+id/test15_bu"
+            android:text="android-crop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            />
+
 
 
         <View

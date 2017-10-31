@@ -48,4 +48,6 @@ dependencies {
     compile 'com.github.jdsjlzx:LRecyclerView:1.4.3'
 
     compile 'com.github.castorflex.verticalviewpager:library:19.0.1'
+
+    compile 'com.soundcloud.android:android-crop:1.0.1@aar'
 }

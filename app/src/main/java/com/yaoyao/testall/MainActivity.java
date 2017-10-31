@@ -170,6 +170,13 @@ public class MainActivity extends BaseActivity {
                 AppManager.getAppManager().ToOtherActivity(ShengCodeActivity.class);
             }
         });
+
+        findViewById(R.id.test15_bu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppManager.getAppManager().ToOtherActivity(YidongActivity.class);
+            }
+        });
     }
 
     @Override
