@@ -17,6 +17,6 @@
         android:layout_width="match_parent"
         android:layout_height="38dp"
         android:layout_margin="30dp"
-        android:text="裁剪"
+        android:text="选择图片"
         />
 </LinearLayout>
