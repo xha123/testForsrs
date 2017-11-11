@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.yaoyao.testall.activity.ForActivity;
 import com.yaoyao.testall.activity.PedActivity;
+import com.yaoyao.testall.activity.SpanActivity;
 import com.yaoyao.testall.androidCrop.AcropActivity;
 import com.yaoyao.testall.zxing.ScanCodeActivity;
 import com.yaoyao.testall.activity.YidongActivity;
@@ -178,6 +179,13 @@ public class MainActivity extends BaseActivity {
                 AppManager.getAppManager().ToOtherActivity(AcropActivity.class);
             }
         });
+        findViewById(R.id.test16_bu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AppManager.getAppManager().ToOtherActivity(SpanActivity.class);
+            }
+        });
+
     }
 
     @Override
