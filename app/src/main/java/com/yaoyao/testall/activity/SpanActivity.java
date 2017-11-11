@@ -1,6 +1,8 @@
 package com.yaoyao.testall.activity;
 
 import android.graphics.Color;
+import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -8,6 +10,9 @@ import android.text.TextPaint;
 import android.text.method.LinkMovementMethod;
 import android.text.style.BackgroundColorSpan;
 import android.text.style.ClickableSpan;
+import android.text.style.ImageSpan;
+import android.text.style.RelativeSizeSpan;
+import android.text.style.StyleSpan;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -23,7 +28,7 @@ import java.util.List;
  */
 
 public class SpanActivity extends BaseActivity{
-    TextView tv1,tv2;
+    TextView tv1,tv2,tv3,tv4,tv5,tv6,tv7;
     @Override
     public void inidata() {
 
@@ -38,6 +43,11 @@ public class SpanActivity extends BaseActivity{
     public void iniview() {
        tv1 = (TextView) findViewById(R.id.span_tv1);
        tv2 = (TextView) findViewById(R.id.span_tv2);
+       tv3 = (TextView) findViewById(R.id.span_tv3);
+       tv4 = (TextView) findViewById(R.id.span_tv4);
+       tv5 = (TextView) findViewById(R.id.span_tv5);
+       tv6 = (TextView) findViewById(R.id.span_tv6);
+       tv7 = (TextView) findViewById(R.id.span_tv7);
     }
 
     @Override
@@ -53,6 +63,27 @@ public class SpanActivity extends BaseActivity{
         BackgroundColorSpan colorSpan = new BackgroundColorSpan(Color.parseColor("#AC00FF30"));
         spannableString.setSpan(colorSpan, 3, spannableString.length(), Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
         tv2.setText(spannableString);
+
+        SpannableString spannableString3 = new SpannableString("9月22日");
+        RelativeSizeSpan sizeSpan = new RelativeSizeSpan(2.0f);
+        spannableString3.setSpan(sizeSpan, 0, 2, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        tv3.setText(spannableString3);
+
+        SpannableString spannableString4 = new SpannableString("为文字设置粗体,斜体风格");
+        StyleSpan styleSpan_B = new StyleSpan(Typeface.BOLD);
+        StyleSpan styleSpan_I = new StyleSpan(Typeface.ITALIC);
+        spannableString4.setSpan(styleSpan_B, 5, 7, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        spannableString4.setSpan(styleSpan_I, 8, 10, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        tv4.setText(spannableString4);
+
+        SpannableString spannableString5 = new SpannableString("在文本中添加xx");
+        Drawable drawable = getResources().getDrawable(R.drawable.m1);
+        int drawHeight = drawable.getMinimumHeight();
+        drawable.setBounds(0, 0, drawHeight, drawHeight);
+        ImageSpan imageSpan = new ImageSpan(drawable);
+        spannableString5.setSpan(imageSpan, 6, 8, Spanned.SPAN_INCLUSIVE_EXCLUSIVE);
+        tv5.setText(spannableString5);
+
 
     }
 
